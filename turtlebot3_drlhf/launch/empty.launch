@@ -1,0 +1,23 @@
+<launch>
+  <arg name="model" default="$(env TURTLEBOT3_MODEL)" doc="model type [burger, waffle, waffle_pi]"/>
+  <arg name="x_pos" default="0.0"/>
+  <arg name="y_pos" default="-1.0"/>
+  <arg name="z_pos" default="0.0"/>
+  <arg name="open_rviz" default="false"/>
+  <arg name="open_map" default="false"/>
+  <arg name="map_file" default="$(find turtlebot3_drlhf)/maps/map.yaml"/>
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find turtlebot3_drlhf)/worlds/empty1.world"/>
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="headless" value="false"/>
+    <arg name="debug" value="false"/>
+  </include>  
+
+
+
+  
+
+</launch>

@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+    <model name="goal">
+        <static>true</static>
+        <link name="link">
+            <collision name="collision">
+                <geometry>
+                    <cylinder>
+                        <radius>0.2</radius>
+                        <length>0.01</length>
+                    </cylinder>
+                </geometry>
+                <surface>
+                    <contact>
+                        <ode/>
+                    </contact>
+                    <friction>
+                        <ode/>
+                    </friction>
+                </surface>
+            </collision>
+            <visual name="visual">
+                <geometry>
+                    <cylinder>
+                        <radius>0.2</radius>
+                        <length>0.01</length>
+                    </cylinder>
+                </geometry>
+                <material>
+                    <ambient>1 0 0 1</ambient> <!-- Red -->
+                    <diffuse>1 0 0 1</diffuse> <!-- Red -->
+                    <specular>0.1 0.1 0.1 1</specular> <!-- Slight shiny effect -->
+                </material>
+            </visual>
+        </link>
+    </model>
+</sdf>
+

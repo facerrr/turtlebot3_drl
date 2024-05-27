@@ -1,0 +1,5 @@
+<launch>
+    <node name="joy_node" pkg="joy" type="joy_node" output="screen"/>
+    <node name="joy_teleop" pkg="turtlebot3_drlhf" type="teleop_by_joy.py" output="screen"/>
+
+</launch>

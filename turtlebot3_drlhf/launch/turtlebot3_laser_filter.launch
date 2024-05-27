@@ -1,0 +1,9 @@
+<launch>
+
+  <node pkg="laser_filters" type="scan_to_scan_filter_chain" name="laser_filter">
+      <rosparam command="load" file="$(find laser_filters)/turtlebot_range_filter.yaml" />
+      <param name="input_topic" type="string" value="/scan" />
+      <remap from="scan_filtered" to="/laser_data" />
+  </node>
+
+</launch>
